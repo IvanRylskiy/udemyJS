@@ -1,33 +1,25 @@
-'use strict';
+var money,
+    time,
+    expensesWhat,
+    expensesHowMuch,
+    dailyMoney;
 
-let persone = {
-    name: "John",
-    age: 25,
-    isMarried: false
-}
+money = +prompt('Ваш бюджет на месяц?', '');
+time = prompt('Введите дату в формате YYYY-MM-DD', '');
+expensesWhat = prompt('Введите обязательную статью расходов в этом месяце', '');
+expensesHowMuch = +prompt('Во сколько обойдется?', '');
 
-console.log(persone);
+let appData = {
+    moneyData: money,
+    timeData: time,
+    expenses: {
+        [expensesWhat]: expensesHowMuch
+    },
+    optionalExpenses: undefined,
+    income: undefined,
+    savings: false
+};
 
-let array = ['plum.png', 'orange.jpg', 'apple.bmp'];
+dailyMoney = (money - expensesHowMuch) / 30;
 
-console.log(array);
-
-// alert('Hello world!');
-
-// let answer = confirm('Are you here?');
-
-// console.log(answer);
-
-// let answer = prompt('Are you here?', '');
-
-// console.log(answer);
-// console.log(typeof(array));
-
-let incr = 10,
-    decr = 10;
-
-incr++;
-decr--;
-
-console.log(incr);
-console.log(decr);
+alert('Бюджет на 1 день: ' + dailyMoney);
