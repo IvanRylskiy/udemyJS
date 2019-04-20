@@ -14,7 +14,8 @@ let appData = {
 };
 
 for (let i = 0; i < 2; i++) {
-    let expensesWhat = prompt('Введите обязательную статью расходов в этом месяце', ''),
+    let expensesWhat = 
+    prompt('Введите обязательную статью расходов в этом месяце', ''),
         expensesHowMuch = +prompt('Во сколько обойдется?', '');
 
     if ( (typeof(expensesWhat)) === 'string' && (typeof(expensesWhat)) != null 
@@ -23,7 +24,8 @@ for (let i = 0; i < 2; i++) {
         appData.expenses[expensesWhat] = expensesHowMuch;
         console.log('Done!');
     } else {
-        expensesWhat = prompt('Введите обязательную статью расходов в этом месяце', '');
+        expensesWhat = 
+        prompt('Введите обязательную статью расходов в этом месяце', '');
         expensesHowMuch = +prompt('Во сколько обойдется?', '');
     }
 }
