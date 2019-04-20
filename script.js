@@ -1,25 +1,29 @@
-let money,
-    time;
+let num = 50;
 
-money = +prompt('Ваш бюджет на месяц?', '');
-time = prompt('Введите дату в формате YYYY-MM-DD', '');
+if (num < 49) {
+    console.log('False!');
+} else if (num > 100) {
+    console.log('False!');
+} else {
+    console.log('True!');
+}
 
-let expensesWhat1 = prompt('Введите обязательную статью расходов в этом месяце', ''),
-    expensesHowMuch1 = +prompt('Во сколько обойдется?', ''),
-    expensesWhat2 = prompt('Введите обязательную статью расходов в этом месяце', ''),
-    expensesHowMuch2 = +prompt('Во сколько обойдется?', '');
+(num == 50) ? console.log('True!') : console.log('False!');
 
-let appData = {
-    moneyData: money,
-    timeData: time,
-    expenses: {
-        [expensesWhat1]: expensesHowMuch1,
-        [expensesWhat2]: expensesHowMuch2
-    },
-    optionalExpenses: {},
-    income: [],
-    savings: false
-};
-
-console.log(appData);
-alert(appData.moneyData / 30);
+switch (num) {
+    case num < 49: 
+        console.log('False!');
+        break;
+    case num > 100:
+        console.log('False!');
+        break;
+    case num > 80:
+        console.log('False!');
+        break;
+    case 50:
+        console.log('True!');
+        break;
+    default:
+        console.log('Something went wrong!');
+        break;
+}
