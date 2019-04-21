@@ -1,3 +1,7 @@
+'use strict';
+
+//CONDITIONS
+
 let num = 50;
 
 if (num < 49) {
@@ -28,6 +32,8 @@ switch (num) {
         break;
 }
 
+//CYCLES
+
 // while (num < 55) {
 //     console.log(num);
 //     num++;
@@ -44,6 +50,8 @@ switch (num) {
 //     }
 //     console.log(i);
 // }
+
+//FUNCTIONS
 
 // function showFirstMessage (text) {
 //     alert(text);
@@ -91,3 +99,30 @@ let twelve = '12.2px';
 // console.log(Math.round(twelve));
 console.log(parseInt(twelve));
 console.log(parseFloat(twelve));
+
+//CALLBACK FUNCTIONS
+
+// function first () {
+//     //doing something
+//     setTimeout( function() {
+//         console.log(1);
+//     }, 500 );
+// }
+
+// function second () {
+//     console.log(2);
+// }
+
+// first();
+// second();
+
+function learnJS (lang, callback) {
+    console.log('I am learning ' + lang + '!');
+    callback();
+}
+
+function done () {
+    console.log('I am done with 3d lesson!');
+}
+
+learnJS('JavaScript', done);
