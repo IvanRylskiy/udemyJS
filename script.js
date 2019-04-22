@@ -53,7 +53,7 @@ switch (num) {
 
 //FUNCTIONS
 
-// function showFirstMessage (text) {
+// function showFirstMessage(text) {
 //     alert(text);
 //     let num = 20;
 //     console.log(num);
@@ -102,26 +102,26 @@ console.log(parseFloat(twelve));
 
 //CALLBACK FUNCTIONS
 
-// function first () {
+// function first() {
 //     //doing something
 //     setTimeout( function() {
 //         console.log(1);
 //     }, 500 );
 // }
 
-// function second () {
+// function second() {
 //     console.log(2);
 // }
 
 // first();
 // second();
 
-function learnJS (lang, callback) {
+function learnJS(lang, callback) {
     console.log('I am learning ' + lang + '!');
     callback();
 }
 
-function done () {
+function done() {
     console.log('I am done with 3d lesson!');
 }
 
@@ -153,3 +153,50 @@ for (let key in options) {
 }
 
 console.log(Object.keys(options).length);
+
+//ARRAYS
+
+let arr = [1, 2, 3, 4, 5];
+
+arr.pop();
+arr.push('fifth');
+arr.shift();
+arr.unshift('first');
+
+for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+}
+
+arr.forEach(function(item, i, mass) {
+    console.log(i + ': ' + item + ' (массив: ' + mass + ')');
+});
+
+console.log(arr);
+
+let mass = [1, 3, 4, 6, 7];
+
+for (let key of mass) {
+    console.log(key);
+}
+
+// let ans = prompt('', ''),
+//     ansArr = [];
+
+// ansArr = ans.split(',');
+// console.log(ansArr);
+
+let arrA = ['qwe', 'qwa', 'qwo', 'qwi'],
+    strA;
+
+strA = arrA.join(', ');
+console.log(strA);
+
+let arrB = [1, 15, 4],
+    arrC;
+
+function compareNum(a, b) {
+    return a - b;
+}
+
+arrC = arrB.sort(compareNum);
+console.log(arrC);
