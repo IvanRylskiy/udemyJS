@@ -1,220 +1,236 @@
 'use strict';
 
-//CONDITIONS
+// //CONDITIONS
 
-let num = 50;
+// let num = 50;
 
-if (num < 49) {
-    console.log('False!');
-} else if (num > 100) {
-    console.log('False!');
-} else {
-    console.log('True!');
-}
-
-(num == 50) ? console.log('True!') : console.log('False!');
-
-switch (num) {
-    case num < 49: 
-        console.log('False!');
-        break;
-    case num > 100:
-        console.log('False!');
-        break;
-    case num > 80:
-        console.log('False!');
-        break;
-    case 50:
-        console.log('True!');
-        break;
-    default:
-        console.log('Something went wrong!');
-        break;
-}
-
-//CYCLES
-
-// while (num < 55) {
-//     console.log(num);
-//     num++;
+// if (num < 49) {
+//     console.log('False!');
+// } else if (num > 100) {
+//     console.log('False!');
+// } else {
+//     console.log('True!');
 // }
 
-// do {
-//     console.log(num);
-//     num++;
-// } while (num < 55);
+// (num == 50) ? console.log('True!') : console.log('False!');
 
-// for (let i = 1; i < 8; i++) {
-//     if (i == 6) {
-//         continue;
-//     }
-//     console.log(i);
+// switch (num) {
+//     case num < 49: 
+//         console.log('False!');
+//         break;
+//     case num > 100:
+//         console.log('False!');
+//         break;
+//     case num > 80:
+//         console.log('False!');
+//         break;
+//     case 50:
+//         console.log('True!');
+//         break;
+//     default:
+//         console.log('Something went wrong!');
+//         break;
 // }
 
-//FUNCTIONS
+// //CYCLES
 
-// function showFirstMessage(text) {
-//     alert(text);
-//     let num = 20;
-//     console.log(num);
+// // while (num < 55) {
+// //     console.log(num);
+// //     num++;
+// // }
+
+// // do {
+// //     console.log(num);
+// //     num++;
+// // } while (num < 55);
+
+// // for (let i = 1; i < 8; i++) {
+// //     if (i == 6) {
+// //         continue;
+// //     }
+// //     console.log(i);
+// // }
+
+// //FUNCTIONS
+
+// // function showFirstMessage(text) {
+// //     alert(text);
+// //     let num = 20;
+// //     console.log(num);
+// // }
+
+// // showFirstMessage('Hello!');
+// // console.log(num);
+
+// function calc(a, b) {
+//     return (a + b);
 // }
 
-// showFirstMessage('Hello!');
-// console.log(num);
+// console.log(calc(3, 4));
 
-function calc(a, b) {
-    return (a + b);
-}
+// console.log(calc(3, 7));
 
-console.log(calc(3, 4));
-
-console.log(calc(3, 7));
-
-function retVar() {
-    let some = 50;
-    return some;
-}
-
-let anotherSome = retVar();
-
-console.log(anotherSome);
-
-let stuff = function(a, b) {
-    return (a + b);
-};
-
-console.log(stuff(3, 5));
-
-let anotherCalc = (j, c) => j + c;
-
-console.log(anotherCalc(3, 5));
-
-let str = 'text';
-
-console.log(str.length);
-console.log(str.toUpperCase());
-
-let twelve = '12.2px';
-
-// console.log(Math.round(twelve));
-console.log(parseInt(twelve));
-console.log(parseFloat(twelve));
-
-//CALLBACK FUNCTIONS
-
-// function first() {
-//     //doing something
-//     setTimeout( function() {
-//         console.log(1);
-//     }, 500 );
+// function retVar() {
+//     let some = 50;
+//     return some;
 // }
 
-// function second() {
-//     console.log(2);
+// let anotherSome = retVar();
+
+// console.log(anotherSome);
+
+// let stuff = function(a, b) {
+//     return (a + b);
+// };
+
+// console.log(stuff(3, 5));
+
+// let anotherCalc = (j, c) => j + c;
+
+// console.log(anotherCalc(3, 5));
+
+// let str = 'text';
+
+// console.log(str.length);
+// console.log(str.toUpperCase());
+
+// let twelve = '12.2px';
+
+// // console.log(Math.round(twelve));
+// console.log(parseInt(twelve));
+// console.log(parseFloat(twelve));
+
+// //CALLBACK FUNCTIONS
+
+// // function first() {
+// //     //doing something
+// //     setTimeout( function() {
+// //         console.log(1);
+// //     }, 500 );
+// // }
+
+// // function second() {
+// //     console.log(2);
+// // }
+
+// // first();
+// // second();
+
+// function learnJS(lang, callback) {
+//     console.log('I am learning ' + lang + '!');
+//     callback();
 // }
 
-// first();
-// second();
+// function done() {
+//     console.log('I am done with 3d lesson!');
+// }
 
-function learnJS(lang, callback) {
-    console.log('I am learning ' + lang + '!');
-    callback();
-}
+// learnJS('JavaScript', done);
 
-function done() {
-    console.log('I am done with 3d lesson!');
-}
+// //OBJECTS
 
-learnJS('JavaScript', done);
+// let options = {
+//     width: 1024,
+//     height: 1024,
+//     name: 'Name'
+// };
 
-//OBJECTS
+// console.log(options.name);
 
-let options = {
-    width: 1024,
-    height: 1024,
-    name: 'Name'
-};
+// options.bool = false;
+// options.colors = {
+//     border: 'black',
+//     bg: 'red'
+// };
 
-console.log(options.name);
+// delete options.bool;
 
-options.bool = false;
-options.colors = {
-    border: 'black',
-    bg: 'red'
-};
+// console.log(options);
 
-delete options.bool;
+// for (let key in options) {
+//     console.log('Свойство ' + key + ' имеет значение ' 
+//     + options[key]);
+// }
 
-console.log(options);
+// console.log(Object.keys(options).length);
 
-for (let key in options) {
-    console.log('Свойство ' + key + ' имеет значение ' 
-    + options[key]);
-}
+// //ARRAYS
 
-console.log(Object.keys(options).length);
+// let arr = [1, 2, 3, 4, 5];
 
-//ARRAYS
+// arr.pop();
+// arr.push('fifth');
+// arr.shift();
+// arr.unshift('first');
 
-let arr = [1, 2, 3, 4, 5];
+// for (let i = 0; i < arr.length; i++) {
+//     console.log(arr[i]);
+// }
 
-arr.pop();
-arr.push('fifth');
-arr.shift();
-arr.unshift('first');
+// arr.forEach(function(item, i, mass) {
+//     console.log(i + ': ' + item + ' (массив: ' + mass + ')');
+// });
 
-for (let i = 0; i < arr.length; i++) {
-    console.log(arr[i]);
-}
+// console.log(arr);
 
-arr.forEach(function(item, i, mass) {
-    console.log(i + ': ' + item + ' (массив: ' + mass + ')');
-});
+// let mass = [1, 3, 4, 6, 7];
 
-console.log(arr);
+// for (let key of mass) {
+//     console.log(key);
+// }
 
-let mass = [1, 3, 4, 6, 7];
+// // let ans = prompt('', ''),
+// //     ansArr = [];
 
-for (let key of mass) {
-    console.log(key);
-}
+// // ansArr = ans.split(',');
+// // console.log(ansArr);
 
-// let ans = prompt('', ''),
-//     ansArr = [];
+// let arrA = ['qwe', 'qwa', 'qwo', 'qwi'],
+//     strA;
 
-// ansArr = ans.split(',');
-// console.log(ansArr);
+// strA = arrA.join(', ');
+// console.log(strA);
 
-let arrA = ['qwe', 'qwa', 'qwo', 'qwi'],
-    strA;
+// let arrB = [1, 15, 4],
+//     arrC;
 
-strA = arrA.join(', ');
-console.log(strA);
+// function compareNum(a, b) {
+//     return a - b;
+// }
 
-let arrB = [1, 15, 4],
-    arrC;
+// arrC = arrB.sort(compareNum);
+// console.log(arrC);
 
-function compareNum(a, b) {
-    return a - b;
-}
+// //Object-oriented programming
 
-arrC = arrB.sort(compareNum);
-console.log(arrC);
+// //Объект - самая главная сущность!
 
-//Object-oriented programming
+// let soldier = {
+//     health: 400,
+//     armor: 100
+// };
 
-//Объект - самая главная сущность!
+// let john = {
+//     health: 100
+// };
 
-let soldier = {
-    health: 400,
-    armor: 100
-};
+// john.__proto__ = soldier;
 
-let john = {
-    health: 100
-};
+// console.log(john);
+// console.log(john.armor);
 
-john.__proto__ = soldier;
+// DOM - document object model (объектная модель документа)
 
-console.log(john);
-console.log(john.armor);
+let box = document.getElementById('box'),
+    btn = document.getElementsByTagName('button'),
+    circle = document.getElementsByClassName('circle'),
+    heart = document.querySelectorAll('.heart'),
+    oneHeart = document.querySelector('.heart');
+
+console.log(box);
+console.log(btn);
+console.log(btn[0]);
+console.log(circle[2]);
+console.log(heart);
+console.log(heart[1]);
+console.log(oneHeart);
