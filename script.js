@@ -225,12 +225,44 @@ let box = document.getElementById('box'),
     btn = document.getElementsByTagName('button'),
     circle = document.getElementsByClassName('circle'),
     heart = document.querySelectorAll('.heart'),
-    oneHeart = document.querySelector('.heart');
+    oneHeart = document.querySelector('.heart'),
+    container = document.querySelector('.container');
 
-console.log(box);
-console.log(btn);
-console.log(btn[0]);
-console.log(circle[2]);
-console.log(heart);
-console.log(heart[1]);
-console.log(oneHeart);
+// WORKING WITH DOM ELEMENTS
+
+box.style.backgroundColor = 'blue';
+
+btn[2].style.borderRadius = '100%';
+
+circle[0].style.backgroundColor = 'green';
+circle[1].style.backgroundColor = 'yellow';
+circle[2].style.backgroundColor = 'red';
+
+for (let i = 0; i < heart.length; i++) {
+    heart[i].style.backgroundColor = 'aqua';
+}
+
+heart.forEach (function (item, i, arr) {
+    item.style.backgroundColor = 'blue';
+    console.log('Painting ' + i + ' element in ' + arr);
+});
+
+let div = document.createElement('div'),
+    text = document.createTextNode('I was here');
+
+div.classList.add('black');
+
+// document.body.appendChild(div);
+// container.appendChild(div);
+
+// div.innerHTML = '<h1>BRUH</h1>';
+div.textContent = 'BRUH';
+
+document.body.insertBefore(div, circle[0]);
+document.body.removeChild(circle[1]);
+container.removeChild(heart[1]);
+
+document.body.replaceChild(btn[0], circle[0]);
+
+console.log(div);
+console.log(text);
