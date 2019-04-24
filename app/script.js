@@ -1,5 +1,31 @@
 let money, time;
 
+let startButton = document.querySelector('#start');
+    
+let budgetValue = document.querySelector('.budget-value'),
+    dayBudgetValue = document.querySelector('.daybudget-value'),
+    levelValue = document.querySelector('.level-value'),
+    expensesValue = document.querySelector('.expenses-value'),
+    optionalExpensesValue = document.querySelector('.optionalexpenses-value'),
+    incomeValue = document.querySelector('.income-value'),
+    monthsavingsValue = document.querySelector('.monthsavings-value'),
+    yearsavingsValue = document.querySelector('.yearsavings-value');
+
+let expensesItem = document.querySelectorAll('.expenses-item'),
+    btnExpenses = document.getElementsByTagName('button')[0],
+    optionalExpensesItem = document.querySelectorAll('.optionalexpenses-item'),
+    btnOptionalExpenses = document.getElementsByTagName('button')[1],
+    btnCountBudget = document.getElementsByTagName('button')[2];
+
+let yearValue = document.querySelector('.year-value'),
+    monthValue = document.querySelector('.month-value'),
+    dayValue = document.querySelector('.day-value');
+
+let incomeItem = document.querySelector('.choose-income'),
+    checkSavings = document.querySelector('#savings'),
+    chooseSumValue = document.querySelector('.choose-sum'),
+    choosePercentValue = document.querySelector('.choose-percent');
+
 function start () {
     money = +prompt('Ваш бюджет на месяц?', '');
     time = prompt('Введите дату в формате YYYY-MM-DD', '');
