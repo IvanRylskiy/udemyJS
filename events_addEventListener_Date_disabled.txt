@@ -1,0 +1,11 @@
+https://learn.javascript.ru/introduction-browser-events
+//события
+
+https://developer.mozilla.org/ru/docs/Web/API/EventTarget/addEventListener
+//addEventListener
+
+https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Date
+//Date
+
+https://www.w3schools.com/tags/att_disabled.asp
+//disabled
