@@ -1,0 +1,8 @@
+http://yournet.kz/blog/js/javascript-touch-sobytiya
+//мобильные события
+
+https://learn.javascript.ru/regular-expressions-javascript
+//регулярные выражения
+
+https://regex101.com/
+//генератор регулярных выражений
