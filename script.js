@@ -219,50 +219,87 @@
 // console.log(john);
 // console.log(john.armor);
 
-// DOM - document object model (объектная модель документа)
+// // DOM - document object model (объектная модель документа)
 
-let box = document.getElementById('box'),
-    btn = document.getElementsByTagName('button'),
-    circle = document.getElementsByClassName('circle'),
-    heart = document.querySelectorAll('.heart'),
-    oneHeart = document.querySelector('.heart'),
-    container = document.querySelector('.container');
+// let box = document.getElementById('box'),
+//     btn = document.getElementsByTagName('button'),
+//     circle = document.getElementsByClassName('circle'),
+//     heart = document.querySelectorAll('.heart'),
+//     oneHeart = document.querySelector('.heart'),
+//     container = document.querySelector('.container');
 
-// WORKING WITH DOM ELEMENTS
+// // WORKING WITH DOM ELEMENTS
 
-box.style.backgroundColor = 'blue';
+// box.style.backgroundColor = 'blue';
 
-btn[2].style.borderRadius = '100%';
+// btn[2].style.borderRadius = '100%';
 
-circle[0].style.backgroundColor = 'green';
-circle[1].style.backgroundColor = 'yellow';
-circle[2].style.backgroundColor = 'red';
+// circle[0].style.backgroundColor = 'green';
+// circle[1].style.backgroundColor = 'yellow';
+// circle[2].style.backgroundColor = 'red';
 
-for (let i = 0; i < heart.length; i++) {
-    heart[i].style.backgroundColor = 'aqua';
-}
+// for (let i = 0; i < heart.length; i++) {
+//     heart[i].style.backgroundColor = 'aqua';
+// }
 
-heart.forEach (function (item, i, arr) {
-    item.style.backgroundColor = 'blue';
-    console.log('Painting ' + i + ' element in ' + arr);
+// heart.forEach (function (item, i, arr) {
+//     item.style.backgroundColor = 'blue';
+//     console.log('Painting ' + i + ' element in ' + arr);
+// });
+
+// let div = document.createElement('div'),
+//     text = document.createTextNode('I was here');
+
+// div.classList.add('black');
+
+// // document.body.appendChild(div);
+// // container.appendChild(div);
+
+// // div.innerHTML = '<h1>BRUH</h1>';
+// div.textContent = 'BRUH';
+
+// document.body.insertBefore(div, circle[0]);
+// document.body.removeChild(circle[1]);
+// container.removeChild(heart[1]);
+
+// document.body.replaceChild(btn[0], circle[0]);
+
+// console.log(div);
+// console.log(text);
+
+// EVENTS & addEventListener
+
+let btn = document.querySelectorAll('button'),
+    container = document.querySelector('.container'),
+    link = document.querySelector('a');
+
+// btn[0].onclick = function() {
+//     alert('Sosi');
+// };
+
+// btn[0].onclick = function() {
+//     alert('Sosi again');
+// };
+
+btn[0].addEventListener('click', function(event) {
+    console.log('Произошло событие: ' + event.type + ' на элементе ' + event.target);
 });
 
-let div = document.createElement('div'),
-    text = document.createTextNode('I was here');
+container.addEventListener('click', function(event) {
+    console.log('Произошло событие: ' + event.type + ' на элементе ' + event.target);
+});
 
-div.classList.add('black');
+link.addEventListener('click', function(event) {
+    event.preventDefault();
+    console.log('Произошло событие: ' + event.type + ' на элементе ' + event.target);
+});
 
-// document.body.appendChild(div);
-// container.appendChild(div);
+btn.forEach(function(item) {
+    item.addEventListener('mouseleave', function() {
+        console.log('Come back, please');
+    });
+});
 
-// div.innerHTML = '<h1>BRUH</h1>';
-div.textContent = 'BRUH';
-
-document.body.insertBefore(div, circle[0]);
-document.body.removeChild(circle[1]);
-container.removeChild(heart[1]);
-
-document.body.replaceChild(btn[0], circle[0]);
-
-console.log(div);
-console.log(text);
+// btn[0].addEventListener('mouseenter', function() {
+//     alert('go away');
+// });
