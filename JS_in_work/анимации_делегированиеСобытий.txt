@@ -1,0 +1,14 @@
+https://learn.javascript.ru/js-animation
+//Анимации
+
+https://learn.javascript.ru/event-delegation
+//Делегирование событий 1
+
+https://habr.com/ru/post/70760/
+//Делегирование событий 2
+
+https://davidwalsh.name/event-delegate
+//Делегирование событий 3
+
+https://html5.by/blog/what-is-requestanimationframe/
+//requestAnimationFrame
