@@ -54,3 +54,29 @@ btnBlock.addEventListener('click', function(event) {
 
 // event.target.tagName == 'BUTTON'
 // event.target.classList.contains('first')
+
+//Параметры документа, окна и работа с ними
+
+let textBox = document.querySelector('.text-box'),
+    btnTextBox = document.querySelector('.btn-text-box');
+
+let width = textBox.clientWidth,
+    height = textBox.clientHeight;
+
+console.log(width);
+console.log(height);
+
+btnTextBox.addEventListener('click', function() {
+    // textBox.style.height = textBox.scrollHeight + 'px';
+    textBox.scrollTop = 0;
+});
+
+console.log(textBox.getBoundingClientRect());
+console.log(textBox.getBoundingClientRect().left);
+
+console.log(document.documentElement.clientWidth);
+console.log(document.documentElement.clientHeight);
+console.log(document.documentElement.scrollTop);
+
+scrollBy(0, 200); // переместиться на 200 по игрику
+scrollTo(0, 200); // переместиться в 200 по игрику
