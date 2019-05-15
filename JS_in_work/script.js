@@ -80,3 +80,51 @@ console.log(document.documentElement.scrollTop);
 
 scrollBy(0, 200); // переместиться на 200 по игрику
 scrollTo(0, 200); // переместиться в 200 по игрику
+
+//Конструкторы и классы
+
+// ES5
+
+function User(name, id) {
+    this.name = name;
+    this.id = id;
+    this.human = true;
+    this.hello = function() {
+        console.log('Hello, ' + this.name + '!');
+    };
+}
+User.prototype.exit = function(name) {
+    console.log('Пользователь ' + this.name + ' вышел');
+};
+
+let ivan = new User('Ivan', 24),
+    alex = new User('Alex', 25);
+
+console.log(ivan);
+console.log(alex);
+
+ivan.exit();
+
+// ES6
+
+class UserES6 {
+    constructor(name, id) {
+        this.name = name;
+        this.id = id;
+        this.human = true;
+    }
+    hello() {
+        console.log(`Hello ${this.name}!`);
+    }
+    exit() {
+        console.log(`User ${this.name} left`);
+    }
+}
+
+let ivanes6 = new UserES6('Ivan', 24),
+    alexes6 = new UserES6('Alex', 25);
+
+console.log(ivanes6);
+console.log(alexes6);
+
+ivanes6.exit();
