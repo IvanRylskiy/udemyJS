@@ -101,4 +101,34 @@ window.addEventListener('DOMContentLoaded', function() {
     }
 
     setClock('timer', deadLine);
+
+    // Modal window
+
+    let more = document.querySelector('.more'),
+        overlay = document.querySelector('.overlay'),
+        btnClose = document.querySelector('.popup-close');
+
+    more.addEventListener('click', function() {
+        overlay.style.display = 'block';
+        this.classList.add('more-splash');
+        document.body.style.overflow = 'hidden';
+    });
+
+    btnClose.addEventListener('click', function() {
+        overlay.style.display = 'none';
+        more.classList.remove('more-splash');
+        document.body.style.overflow = '';
+    });
+
+    // Modal window in tabs
+
+    let globalInfo = document.querySelector('.info');
+
+    globalInfo.addEventListener('click', function(event) {
+        if (event.target && event.target.classList.contains('description-btn')) {
+            overlay.style.display = 'block';
+            more.classList.add('more-splash');
+            document.body.style.overflow = 'hidden';
+        }
+    });
 });
