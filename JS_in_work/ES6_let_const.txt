@@ -1,0 +1,5 @@
+https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/let
+//ES6 let
+
+https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/const
+//ES6 const
