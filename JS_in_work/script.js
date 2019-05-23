@@ -201,3 +201,27 @@ let nameES6 = 'Ivan',
     mailES6 = 'ex@mail.com';
 
 document.write(`Пользователю ${nameES6} ${ageES6}. Его почтовый адрес: ${mailES6}.`);
+
+//ES6 let & const
+
+function makeArray() {
+    var items = [];
+
+    for (let i = 0; i < 10; i++) { // если VAR, то переменная используется одна на весь цикл, в каждой итерации она не создается заново
+        var item = function() {
+            console.log(i);
+        };
+        items.push(item);
+    }
+
+    return items;
+}
+
+var arr = makeArray();
+
+arr[1]();
+arr[3]();
+arr[7]();
+
+// Если использовать LET, то выведет как надо
+// Если VAR, то выведет 10
