@@ -193,3 +193,11 @@ btnThis.addEventListener('click', function() {
 // 2) Метод объекта - this = объект
 // 3) Конструктор (new) - this = новый созданный объект
 // 4) Указание конкретного контекста - call, apply, bind
+
+//ES6 Интерполяция
+
+let nameES6 = 'Ivan',
+    ageES6 = 30,
+    mailES6 = 'ex@mail.com';
+
+document.write(`Пользователю ${nameES6} ${ageES6}. Его почтовый адрес: ${mailES6}.`);
