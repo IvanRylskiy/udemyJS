@@ -1,0 +1,5 @@
+https://www.cheatography.com/romansemko/cheat-sheets/ecmascript-6-es6/pdf_bw/
+//ES6 подсказка
+
+https://habr.com/ru/post/305900/
+//ES6 по-человечески
