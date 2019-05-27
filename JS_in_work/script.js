@@ -256,3 +256,20 @@ btnES6.addEventListener('click', function() {
     };
     show();
 });
+
+//ES6 Параметры по умолчанию
+
+// ES5
+function calcOrDouble(number, basis) {
+    basis = basis || 2; //если не передать basis, то = 2
+    console.log(number * basis);
+}
+calcOrDouble(3, 5);
+calcOrDouble(6);
+
+// ES6
+function calcOrDoubleES6(number, basis = 2) {
+    console.log(number * basis);
+}
+calcOrDouble(3, 5);
+calcOrDouble(6);
