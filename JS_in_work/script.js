@@ -225,3 +225,34 @@ arr[7]();
 
 // Если использовать LET, то выведет как надо
 // Если VAR, то выведет 10
+
+//ES6 Arrow function
+
+let fun = () => {
+    console.log(this); //WINDOW
+};
+
+fun();
+
+let objES6 = {
+    number: 5,
+    sayNumber: function() {
+        let say = () => {
+            console.log(this); //objES6
+        };
+        say();
+    }
+};
+
+objES6.sayNumber();
+
+// У стрелочной функции нет своего контекста вызова
+
+let btnES6 = document.querySelector('.btn-this');
+
+btnES6.addEventListener('click', function() {
+    let show = () => {
+        console.log(this); //кнопка
+    };
+    show();
+});
