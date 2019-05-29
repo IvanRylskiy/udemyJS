@@ -1,0 +1,5 @@
+http://jsraccoon.ru/es6-classes
+//ES6 class 1
+
+https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Classes
+//ES6 class 2
