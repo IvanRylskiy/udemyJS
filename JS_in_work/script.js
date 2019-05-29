@@ -273,3 +273,19 @@ function calcOrDoubleES6(number, basis = 2) {
 }
 calcOrDouble(3, 5);
 calcOrDouble(6);
+
+//ES6 Class
+
+class Rectangle {
+    constructor(height, width) {
+        this.height = height;
+        this.width = width;
+    }
+    calcArea() {
+        return this.height * this.width;
+    }
+}
+
+const square = new Rectangle(10, 10);
+
+console.log(square.calcArea());
