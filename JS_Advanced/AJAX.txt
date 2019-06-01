@@ -1,0 +1,14 @@
+https://developer.mozilla.org/ru/docs/Web/API/XMLHttpRequest
+//XMLHttpRequest
+
+https://developer.mozilla.org/ru/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
+//Использование XMLHttpRequest
+
+https://developer.mozilla.org/ru/docs/Web/API/FormData/Using_FormData_Objects
+//Объект FormData
+
+https://ilikekillnerds.com/2017/09/convert-formdata-json-object/
+//Из FormData в JSON
+
+https://ru.wikipedia.org/wiki/Заголовки_HTTP
+//Заголовки HTTP
