@@ -1,0 +1,9 @@
+input {
+    height: 50px;
+    width: 300px;
+    font-size: 30px;
+}
+label {
+    font-size: 30px;
+    display: block;
+}
