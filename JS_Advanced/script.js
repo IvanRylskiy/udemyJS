@@ -17,7 +17,10 @@ console.log(JSON.parse(JSON.stringify(options)));
 //AJAX - Asynchronous Javascript And Xml
 
 let inputRub = document.getElementById('rub'),
-    inputUsd = document.getElementById('usd');
+    inputUsd = document.getElementById('usd'),
+    inputVndfromusd = document.getElementById('vndfromusd'),
+    inputEur = document.getElementById('eur'),
+    inputVndfromeur = document.getElementById('vndfromeur');
 
 inputRub.addEventListener('input', () => {
     let request = new XMLHttpRequest();
@@ -37,8 +40,14 @@ inputRub.addEventListener('input', () => {
             let data = JSON.parse(request.response);
 
             inputUsd.value = (inputRub.value / data.usd);
+            inputVndfromusd.value = (inputUsd.value * data.vndfromusd);
+            inputEur.value = (inputRub.value / data.eur);
+            inputVndfromeur.value = (inputEur.value * data.vndfromeur);
         } else {
             inputUsd.value = 'Something went wrong!';
+            inputVndfromusd.value = 'Something went wrong!';
+            inputEur.value = 'Something went wrong!';
+            inputVndfromeur.value = 'Something went wrong!';
         }
     });
 });
