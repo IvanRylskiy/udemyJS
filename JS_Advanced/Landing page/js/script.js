@@ -130,6 +130,86 @@ window.addEventListener('DOMContentLoaded', function() {
             document.body.style.overflow = 'hidden';
         }
     });
+
+    // Form in modal
+
+    let message = {
+        loading: 'Загрузка...',
+        success: 'Спасибо за заявку! Скоро мы с Вами свяжемся!',
+        failure: 'Ошибка! Что-то пошло не так...'
+    };
+
+    let statusMessage = document.createElement('div');
+    statusMessage.classList.add('status');
+
+    let formModal = document.querySelector('.main-form'),
+        inputModal = formModal.getElementsByTagName('input');
+
+    formModal.addEventListener('submit', function(event) {
+        event.preventDefault();
+        formModal.appendChild(statusMessage);
+
+        let request = new XMLHttpRequest();
+        request.open('POST', 'server.php');
+        request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+        let formData = new FormData(formModal);
+
+        request.send(formData);
+
+        request.addEventListener('readystatechange', function() {
+            if (request.readyState < 4) {
+                statusMessage.textContent = message.loading;
+            } else if (request.readyState === 4 && request.status == 200) {
+                statusMessage.textContent = message.success;
+            } else {
+                statusMessage.textContent = message.failure;
+            }
+        });
+
+        for (let i = 0; i < inputModal.length; i++) {
+            inputModal[i].value = '';
+        }
+    });
+
+    // Form
+
+    let form = document.getElementById('form'),
+        input = form.getElementsByTagName('input');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        form.appendChild(statusMessage);
+
+        let request = new XMLHttpRequest();
+        request.open('POST', 'server.php');
+        request.setRequestHeader('Content-type', 'application/json; charset=UTF-8');
+
+        let formData = new FormData(form);
+
+        let obj = {};
+        formData.forEach(function(value,key) {
+            obj[key] = value;
+        });
+
+        let json = JSON.stringify(obj);
+
+        request.send(json);
+
+        request.addEventListener('readystatechange', function() {
+            if (request.readyState < 4) {
+                statusMessage.textContent = message.loading;
+            } else if (request.readyState === 4 && request.status == 200) {
+                statusMessage.textContent = message.success;
+            } else {
+                statusMessage.textContent = message.failure;
+            }
+        });
+
+        for (let i = 0; i < input.length; i++) {
+            input[i].value = '';
+        }
+    });
 });
 
 // Ex. 11, homework
