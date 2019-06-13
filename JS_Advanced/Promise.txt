@@ -1,0 +1,5 @@
+https://learn.javascript.ru/promise
+//Promise 1
+
+https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise
+//Promise 2
