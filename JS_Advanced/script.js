@@ -22,7 +22,7 @@ let inputRub = document.getElementById('rub'),
     inputEur = document.getElementById('eur'),
     inputVndfromeur = document.getElementById('vndfromeur');
 
-inputRub.addEventListener('input', () => {
+/* inputRub.addEventListener('input', () => {
     let request = new XMLHttpRequest();
 
     request.open('GET', 'current.json');
@@ -49,6 +49,45 @@ inputRub.addEventListener('input', () => {
             inputEur.value = 'Something went wrong!';
             inputVndfromeur.value = 'Something went wrong!';
         }
+    });
+}); */
+
+//Переделываем с помощью Promise
+inputRub.addEventListener('input', () => {
+    function catchData() {
+        return new Promise(function(resolve, reject) {
+            let request = new XMLHttpRequest();
+            request.open('GET', 'current.json');
+            request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+            request.send();
+
+            request.onload = function () {
+                if(request.readyState === 4) {
+                    if(request.status == 200) {
+                        resolve(this.response);
+                    } else {
+                        reject();
+                    }
+                }
+            };
+        });
+    }
+
+    catchData()
+    .then(response => {
+        console.log(response);
+        let data = JSON.parse(response);
+        inputUsd.value = (inputRub.value / data.usd);
+        inputVndfromusd.value = (inputUsd.value * data.vndfromusd);
+        inputEur.value = (inputRub.value / data.eur);
+        inputVndfromeur.value = (inputEur.value * data.vndfromeur);
+    })
+    .then(() => console.log(5000))
+    .catch(() => {
+        inputUsd.value = 'Something went wrong!';
+        inputVndfromusd.value = 'Something went wrong!';
+        inputEur.value = 'Something went wrong!';
+        inputVndfromeur.value = 'Something went wrong!';
     });
 });
 
