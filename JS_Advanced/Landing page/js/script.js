@@ -261,6 +261,49 @@ window.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+
+    // Calc
+
+    let persons = document.querySelectorAll('.counter-block-input')[0],
+        restDays = document.querySelectorAll('.counter-block-input')[1],
+        place = document.getElementById('select'),
+        totalValue = document.getElementById('total'),
+        personsSum = 0,
+        restDaysSum = 0,
+        totalValueSum = 0;
+
+    totalValue.textContent = 0;
+
+    persons.addEventListener('change', function() {
+        personsSum = +this.value;
+        totalValueSum = (restDaysSum + personsSum) * 4000;
+
+        if (restDays.value == '' || persons.value == '') { // если только restDays.value == '' то багается
+            totalValue.textContent = 0;
+        } else {
+            totalValue.textContent = totalValueSum;
+        }
+    });
+
+    restDays.addEventListener('change', function() {
+        restDaysSum = +this.value;
+        totalValueSum = (restDaysSum + personsSum) * 4000;
+
+        if (persons.value == '' || restDays.value == '') { // если только persons.value == '' то багается
+            totalValue.textContent = 0;
+        } else {
+            totalValue.textContent = totalValueSum;
+        }
+    });
+
+    place.addEventListener('change', function() {
+        if (persons.value == '' || restDays.value == '') { 
+            totalValue.textContent = 0;
+        } else {
+            let a = totalValueSum;
+            totalValue.textContent = a * this.options[this.selectedIndex].value;
+        }
+    });
 });
 
 // Ex. 11, homework
