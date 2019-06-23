@@ -1,4 +1,4 @@
-input {
+input[type=text] {
     height: 50px;
     width: 300px;
     font-size: 30px;
