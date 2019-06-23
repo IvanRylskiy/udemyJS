@@ -1,0 +1,5 @@
+https://learn.javascript.ru/exception
+//try/catch 1
+
+https://www.w3schools.com/js/js_errors.asp
+//try/catch 2
